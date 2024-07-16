@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.calendario {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 350px;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+}
+
+.mes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mes button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.diasSemana, .dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.diasSemana div, .dias div {
+    padding: 10px;
+    text-align: center;
+}
+
+.diasSemana {
+    background: #007bff;
+    color: white;
+}
+
+.dias {
+    height: 400px; /* Altura fixa para garantir que o tamanho não mude */
+}
+
+.dias .dia {
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dias .dia:hover {
+    background: #e0e0e0;
+}
+
+.dias .vazio {
+    background: #f0f0f0;
+}
